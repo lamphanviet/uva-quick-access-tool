@@ -1,5 +1,5 @@
 body {
-	min-width: 640px;
+	min-width: 700px;
 	min-height: 200px;
 	overflow-x: hidden;
 	background: #F7FFF8;
@@ -49,7 +49,7 @@ fieldset legend {
 }
 
 .judgeTable {
-	/*width: 100%; */
+	width: 100%;
 	border-collapse: collapse;
 	border: 2px solid #B9C9FE;
 	font-size: 0.8em;

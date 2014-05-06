@@ -71,7 +71,7 @@ var Submission = function(sid, pid, ver, run, sbt, lan, rank, uid, name) {
 
 /*======= FORMAT =======*/
 var format = new function() {
-	var langList = ["", "C", "Java", "C++", "PASCAL"]; // OK
+	var langList = ["", "C", "Java", "C++", "PASCAL", "C++11"]; // OK
 	var verList = new function() {}; // OK
 		verList[0] = ["<i>?</i>", "QU", "#000000"];
 		verList[10] = ["SE","SE","#000000"];
