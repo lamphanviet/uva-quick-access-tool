@@ -24,7 +24,7 @@ var uhuntProblemNum = "http://uhunt.felix-halim.net/api/p/num/"; // + problem Nu
 var uhuntSubsNum = "http://uhunt.felix-halim.net/api/subs-nums/"; // + userid + probNum
 var uhuntSubsId = "http://uhunt.felix-halim.net/api/subs-pids/"; // + userid + problem Id
 var uhuntRankList = "http://uhunt.felix-halim.net/api/ranklist/"; // + userid/up/down
-var uhuntUserSubmissions = "http://uhunt.felix-halim.net/api/subs/"; // + userid
+var uhuntUserSubmissions = "http://uhunt.felix-halim.net/api/subs-user/"; // + userid
 var uhuntUserNameToId = "http://uhunt.felix-halim.net/api/uname2uid/" // + username
 
 var timeDifference = 0;
@@ -364,7 +364,7 @@ function LiveJudge(thisName) {
 		// result.sub[i] => 0:subId, 1:probId, 2:verdict, 3:runtime, 4:subtime, 5:language, 6:rank
 		// uhunt Submission = { sid, pid, ver, run, sbt, lan, rank, uid, name, uname }
 		$.getJSON(uhuntUserSubmissions + id, function(data) {
-			var subs = $.parseJSON(data.subs);
+			var subs = data.subs;
 			subs.sort(compareSubmissionsArray); subs.reverse();
 			if (subs.length > maxNumberOfRows) subs.splice(maxNumberOfRows, subs.length - maxNumberOfRows);
 			for (var i = 0; i < subs.length; i++) {
